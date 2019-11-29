@@ -9,8 +9,8 @@ import { HttpService } from './http.service';
 })
 export class AppComponent {
   
-  private movies: any;
-  private totalItems;
+ movies: any;
+ totalItems;
 
 
   constructor(private ngxUiLoaderService: NgxUiLoaderService, private httpService: HttpService) { }
