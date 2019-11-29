@@ -1,0 +1,10 @@
+<ngx-ui-loader></ngx-ui-loader>
+<div class="row">
+  <div class="col-12">
+      <h1 class="logoHeading">YTS Replica</h1>
+      <app-search (searchOutput)="onSearch($event)"></app-search>
+  </div>
+</div>
+
+
+  <app-movie-card [movies]="movies" [totalItems]="totalItems" (onPageChangeEmit)="onPageChange($event)"></app-movie-card>

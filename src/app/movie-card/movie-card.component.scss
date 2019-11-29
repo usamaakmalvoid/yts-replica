@@ -1,0 +1,30 @@
+.margin20{
+    margin-bottom: 20px;
+}
+
+.rating{
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    right: 10px;
+}
+
+
+.card{
+    border: 0px solid rgba(43, 43, 43, 0.125);
+}
+
+.badge{
+    margin: 2px;
+}
+.badge-success{
+    background-color: #000000;
+}
+
+pagination-controls .ngx-pagination a{
+    color: white;
+}
+
+pagination-controls .ngx-pagination a:hover{
+    color: black;
+}

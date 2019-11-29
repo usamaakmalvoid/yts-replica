@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-3 margin20" *ngFor="let item of movies | paginate: { itemsPerPage: 20, currentPage: p, totalItems: totalItems }">
+        <div class="card">
+            <img class="card-img-top" src="{{item.medium_cover_image}}" alt="{{item.title}}">
+            <div class="card-body">
+                <span class="badge badge-success rating">Rating {{item.rating}}</span>
+                <h4>{{item.title}}</h4>
+                <p class="card-text">{{item.description_full | slice:0:30}}...</p>
+                <h5 class="card-text">Genere</h5>
+                <span class="badge badge-primary" *ngFor="let genre of item.genres">{{genre}}</span>
+            </div>
+        </div>
+    </div> 
+    <div class="col-12">
+        <pagination-controls (pageChange)="onPageChange($event)"></pagination-controls>
+    </div>
+</div>
