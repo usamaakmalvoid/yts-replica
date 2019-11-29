@@ -1,5 +1,5 @@
 <div class="form-group">
     <label for="search">Search Here</label>
-    <input type="text" class="form-control searchText" [(ngModel)]="searchQuery" name="searchQuery" (focusout)="onSearch()" id="search" aria-describedby="searchHelp" placeholder="Enter Movie">
+    <input type="text" class="form-control searchText" [(ngModel)]="searchQuery" name="searchQuery" (keydown.enter)="onSearch()" id="search" aria-describedby="searchHelp" placeholder="Enter Movie">
     <small id="searchHelp" class="form-text text-muted">We'll never share your search history with anyone else.</small>
 </div>

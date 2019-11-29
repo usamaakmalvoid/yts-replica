@@ -44,6 +44,7 @@ export class AppComponent {
       },
       null
     ).then(res => {
+      console.log(res);
       this.totalItems = res.data.movie_count;
       this.movies = res.data.movies;
       this.ngxUiLoaderService.stop(); // stop foreground spinner of the master loader with 'default' taskId
