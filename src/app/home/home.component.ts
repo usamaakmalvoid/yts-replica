@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit {
      });
    }
  
-   onBack($data){
+   onBack($event){
      this.page = 1;
      this.query = '';
      this.callApi();

@@ -9,5 +9,5 @@
 
 
   <app-movie-card *ngIf="visible" [movies]="movies" [totalItems]="totalItems" (onPageChangeEmit)="onPageChange($event)"></app-movie-card>
-  <app-four-ofour *ngIf="visible == false" (onBack)="onBack($data)"></app-four-ofour>
+  <app-four-ofour *ngIf="visible == false" (onBack)="onBack($event)"></app-four-ofour>
 </div>
