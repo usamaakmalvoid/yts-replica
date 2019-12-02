@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { NgxUiLoaderModule, NgxUiLoaderConfig } from  'ngx-ui-loader';
+import { NgxUiLoaderModule, NgxUiLoaderConfig, NgxUiLoaderRouterModule } from  'ngx-ui-loader';
 
 import {NgxPaginationModule} from 'ngx-pagination';
 
@@ -12,6 +12,9 @@ import { SearchComponent } from './search/search.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpService } from './http.service';
+import { FourOFourComponent } from './four-ofour/four-ofour.component';
+import { HomeComponent } from './home/home.component';
+import { MovieComponent } from './movie/movie.component';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   bgsColor: "#28a745",
@@ -43,17 +46,22 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   minTime: 500
 }
 
+
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    FourOFourComponent,
+    HomeComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
+    NgxUiLoaderRouterModule,
     HttpClientModule,
     NgxPaginationModule
   ],

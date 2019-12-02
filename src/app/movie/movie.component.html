@@ -1,0 +1,16 @@
+<br>
+<div class="row">
+    <div class="col-12">
+        <h1 class="logoHeading">YTS Replica</h1>
+    </div>
+    <div class="col-4">
+        <img class="movie-poster" src="{{movie.medium_cover_image}}" alt="Card image">
+    </div>
+    <div class="col-8">
+        <h1 class="heading">{{movie.title}} <span class="badge badge-success">{{movie.rating}}</span></h1>
+        <p class="text">{{movie.description_full}}</p>
+        
+        <pre><button (click)="back()" class="btn"><i class="fa fa-chevron-left"></i> Back</button>   <button (click)="download(movie.torrents[0].url)" class="btn"><i class="fa fa-download"></i> Download</button></pre>
+        
+    </div>
+</div>

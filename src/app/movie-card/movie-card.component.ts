@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class MovieCardComponent implements OnInit {
 
-  @Input() movies:any;
+  @Input() movies:any = null;
   @Input() totalItems:number = 0;
   p:number = 1;
   @Output() private onPageChangeEmit = new EventEmitter<Number>();

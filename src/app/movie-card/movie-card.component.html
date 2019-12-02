@@ -4,14 +4,14 @@
             <img class="card-img-top" src="{{item.medium_cover_image}}" alt="{{item.title}}">
             <div class="card-body">
                 <span class="badge badge-success rating">Rating {{item.rating}}</span>
-                <h4>{{item.title}}</h4>
+                <h4><a routerLink="/movie/{{item.id}}" >{{item.title}}</a></h4>
                 <p class="card-text">{{item.description_full | slice:0:30}}...</p>
                 <h5 class="card-text">Genere</h5>
                 <span class="badge badge-primary" *ngFor="let genre of item.genres">{{genre}}</span>
             </div>
         </div>
     </div> 
-    <div class="col-12">
+    <div *ngIf="movies != null" class="col-12">
         <pagination-controls (pageChange)="onPageChange($event)"></pagination-controls>
     </div>
 </div>
